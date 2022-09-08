@@ -1,6 +1,5 @@
 
 from django.db import models
-from django import forms
 
 
 class reg_user(models.Model):
