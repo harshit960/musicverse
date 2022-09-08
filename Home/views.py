@@ -1,5 +1,5 @@
 
-from django.shortcuts import render,redirect
+from django.shortcuts import render
 from pytube import YouTube
 from .models import history
 

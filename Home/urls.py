@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import *
+from .views import Home,get_audio_data
 urlpatterns = [
     path('', Home , name='MusicVerse'),
 

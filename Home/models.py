@@ -1,14 +1,7 @@
 
 from django.db import models
 
-
-class reg_user(models.Model):
-  id = models.IntegerField(auto_created=True,primary_key=True)
-  email = models.CharField(max_length=255,blank=True)
-  Name = models.CharField(max_length=255,blank=True)
-  Password = models.CharField(max_length=50,blank=True)
-  tags = models.TextField()
-  
+ 
 
 
 class history(models.Model):
