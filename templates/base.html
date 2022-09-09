@@ -187,7 +187,7 @@
                 {% if user.is_authenticated %}
                 {% for i in data %}
                 <li class="list-group-item my-1">
-                    <a class="no-ajaxy media-url" href="{{i.dtlink}}" data-wave="{% static 'assets/media/track1.json' %}">
+                    <a class="no-ajaxy media-url" href=" {% if search %} {{i.4}} {% endif %} {{i.dtlink}}" data-wave="{% static 'assets/media/track1.json' %}">
                         <div class="d-flex justify-content-between align-items-center">
                             <i class="icon-play s-28"></i>
                             <figure class="avatar-md float-left mr-3 mt-1">
@@ -250,7 +250,7 @@
         </svg>
     </button>
     <div class="searchOverlay__inner  searchOverlay__inner--up">
-        <form class="searchOverlay__form" action='/player'>
+        <form class="searchOverlay__form" action='/search'>
             <input
                     class="searchOverlay__input"
                     name="searchOverlay"

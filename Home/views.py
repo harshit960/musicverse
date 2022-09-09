@@ -1,6 +1,6 @@
 
 from django.shortcuts import render
-from pytube import YouTube
+from pytube import YouTube,Search,Playlist
 from .models import history
 
 
@@ -8,7 +8,6 @@ from .models import history
 def Home(request):
  
     data=playlist(request)
-    print(data)
     return render(request,'index.html',{'data':data})
 
 
@@ -38,8 +37,8 @@ def del_duplicate(hid_list):
         history.objects.filter(hid=i).delete()
 
 
-def get_link(list,qcode):
-    l2=list['formats']
+def get_link(list,qcode,formate):
+    l2=list[formate]
     for i in l2:
         if i['itag']==qcode:
             link = i['url']
@@ -64,7 +63,7 @@ def get_audio_data(request):
         url= url.replace("watch?v=", "embed/")
         video = YouTube(ytlink)
         l1=video.streaming_data
-        dlink=get_link(l1,18)
+        dlink=get_link(l1,140,'adaptiveFormats')
         Vtitle=video.title
         user= request.user.id
         tags = video.keywords
@@ -77,7 +76,50 @@ def get_audio_data(request):
 
 
  
-        
+def searchRequest(request):
+    list=[]
+    try:
+        keyword=request.GET["searchOverlay"]
+        list = ytsearch(keyword)
+        data=playlist(request)
+    except:
+        pass      
+    return render(request,'search.html',{'slist':list,'data':data,'search':True})
         
             
 
+def ytsearch(keyword):
+    Sobj = Search(keyword)
+    list=Sobj.results
+    dict =[]
+    for i in list:
+        d=i.streaming_data
+        l2 = d['adaptiveFormats']
+        for x in l2:
+            if x['itag']==140:
+                dict.append([i.title,i.length,i.thumbnail_url,i.views,x['url'],])
+    return dict
+
+
+
+
+def managePlaylist(request):
+    try:
+            link=""
+            playlist_download_links=[]
+            link=request.GET["playlist_link"]
+            p = Playlist(link)
+            for i in p.videos:
+                l1=i.streaming_data
+                dlink=get_link(l1,22,'formats')
+                playlist_download_links.append(dlink)
+                #dlink=get_link(l1,140)
+
+            
+            print(playlist_download_links)
+    except:
+        print('hi')
+    return render(request,'playlist.html',{'pdlink':playlist_download_links})
+
+
+    

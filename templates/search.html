@@ -1,0 +1,430 @@
+
+{% extends 'base.html' %}
+
+{%block start%}
+{% load static %}
+
+
+
+<main id="pageContent" class="page has-sidebar">
+<div class="container-fluid relative animatedParent animateOnce">
+    <div class="wrapper animated fadeInUpShort p-md-5 p-3">
+        <section>
+            <div class="relative mb-5">
+                <h1 class="mb-2 text-primary">Blog</h1>
+                <p>Some ready widgets for you to use easily anywhere.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    {% for i in slist %}
+
+                    <div class="card mb-3">
+                        <div class="p-3">
+                            <div class="d-md-flex align-items-center">
+                                <div class="mr-3 ml-md-4 text-md-center">
+                                    <div class="s-24">09</div>
+                                    <small>July, 2019</small>
+                                </div>
+                                <div>
+                                    <a href="#playlist"><h2 class="font-weight-lighter h3 my-3 text-primary">
+                                        {{i.0}}
+                                    </h2></a>
+                                    <ul class="align-baseline list-inline">
+                                        <li class="list-inline-item"><i class="icon-folder text-primary mr-2"></i>International
+                                        </li>
+                                        <li class="list-inline-item"><i class="icon-list-1 text-primary mr-2"></i>7
+                                            Comments
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <figure class="mb-3">
+                            <img src="assets/img/demo/b4.jpg" alt="">
+                        </figure>
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur cum dolorem ea
+                                    earum esse fuga incidunt iure, magni molestias neque omnis optio perspiciatis,
+                                    quibusdam quod ratione,
+                                    recusandae saepe temporibus unde...</p>
+                            </div>
+                            <div class="d-flex align-items-center mt-4">
+                                <div>
+                                    <div class="avatar avatar-sm mr-2"><img src="assets/img/demo/u7.jpg" alt=""></div>
+                                    Mari Joe
+                                </div>
+                                <a href="blog-single.html" class="ml-auto"><i class="icon icon-link mr-2 "></i>Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <aside class="col-md-4">
+                    <div class="card mb-3">
+                        <div class="card-header transparent b-b">
+                            <strong>Playlist</strong>
+                        </div>
+                        <img src="assets/img/demo/v3.jpg" alt="">
+                        <ul class="playlist list-group list-group-flush">
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <a class="no-ajaxy media-url" href="assets/media/track2.mp3" data-wave="assets/media/track2.json">
+                                            <i class="icon-play s-28"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-10">
+                                        <small>Dance with me tonight</small>
+                                    </div>
+                                    <small class="ml-auto"> 5:03</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <a class="no-ajaxy media-url" href="assets/media/track2.mp3" data-wave="assets/media/track2.json">
+                                            <i class="icon-play s-28"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-10">
+                                        <small>Meet with me tonight</small>
+                                    </div>
+                                    <small class="ml-auto"> 5:03</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <a class="no-ajaxy media-url" href="assets/media/track2.mp3" data-wave="assets/media/track2.json">
+                                            <i class="icon-play s-28"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-10">
+                                        <small>Go with me tonight</small>
+                                    </div>
+                                    <small class="ml-auto"> 5:03</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <a class="no-ajaxy media-url" href="assets/media/track2.mp3" data-wave="assets/media/track2.json">
+                                            <i class="icon-play s-28"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-10">
+                                        <small>Hellow with me tonight</small>
+                                    </div>
+                                    <small class="ml-auto"> 5:03</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <a class="no-ajaxy media-url" href="assets/media/track2.mp3" data-wave="assets/media/track2.json">
+                                            <i class="icon-play s-28"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-10">
+                                        <small>Once Dance with me tonight</small>
+                                    </div>
+                                    <small class="ml-auto"> 5:03</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header transparent b-b">
+                            <strong>Latest Tracks</strong>
+                        </div>
+                        <ul class="playlist list-group list-group-flush">
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <a class="no-ajaxy media-url" href="assets/media/track2.mp3" data-wave="assets/media/track2.json">
+                                            <i class="icon-play s-28"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-10">
+                                        <figure class="avatar-md float-left  mr-3 mt-1">
+                                            <img class="r-3" src="assets/img/demo/a4.jpg" alt="">
+                                        </figure>
+                                        <h6>Dance with me tonight</h6>
+                                        <small>Atif Aslam</small>
+                                    </div>
+                                    <small class="ml-auto"> 5:03</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <a class="no-ajaxy media-url" href="assets/media/track2.mp3" data-wave="assets/media/track2.json">
+                                            <i class="icon-play s-28"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-10">
+                                        <figure class="avatar-md float-left  mr-3 mt-1">
+                                            <img class="r-3" src="assets/img/demo/a3.jpg" alt="">
+                                        </figure>
+                                        <h6>Dance with me tonight</h6>
+                                        <small>Jone Aslam</small>
+                                    </div>
+                                    <small class="ml-auto"> 5:03</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <a class="no-ajaxy media-url" href="assets/media/track2.mp3" data-wave="assets/media/track2.json">
+                                            <i class="icon-play s-28"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-10">
+                                        <figure class="avatar-md float-left  mr-3 mt-1">
+                                            <img class="r-3" src="assets/img/demo/a2.jpg" alt="">
+                                        </figure>
+                                        <h6>Dance with me tonight</h6>
+                                        <small>Yoo Doe</small>
+                                    </div>
+                                    <small class="ml-auto"> 5:03</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header transparent b-b">
+                            <strong>New Artists</strong>
+                        </div>
+                        <ul class="playlist list-group list-group-flush">
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center">
+                                    <div class="col-10">
+                                        <figure class="avatar avatar-md float-left  mr-3 mt-1">
+                                            <img src="assets/img/demo/u1.jpg" alt="">
+                                        </figure>
+                                        <h6>Zoe Foe</h6>
+                                        <small>5 Albums - 50 Songs</small>
+                                    </div>
+                                    <a href="#" class="ml-auto"><i class="icon-more"></i></a>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center">
+                                    <div class="col-10">
+                                        <figure class="avatar avatar-md float-left  mr-3 mt-1">
+                                            <img src="assets/img/demo/u2.jpg" alt="">
+                                        </figure>
+                                        <h6>Zoe Foe</h6>
+                                        <small>5 Albums - 50 Songs</small>
+                                    </div>
+                                    <a href="#" class="ml-auto"><i class="icon-more"></i></a>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center">
+                                    <div class="col-10">
+                                        <figure class="avatar avatar-md float-left  mr-3 mt-1">
+                                            <img src="assets/img/demo/u3.jpg" alt="">
+                                        </figure>
+                                        <h6>Zoe Foe</h6>
+                                        <small>5 Albums - 50 Songs</small>
+                                    </div>
+                                    <a href="#" class="ml-auto"><i class="icon-more"></i></a>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center">
+                                    <div class="col-10">
+                                        <figure class="avatar avatar-md float-left  mr-3 mt-1">
+                                            <img src="assets/img/demo/u6.jpg" alt="">
+                                        </figure>
+                                        <h6>Zoe Foe</h6>
+                                        <small>5 Albums - 50 Songs</small>
+                                    </div>
+                                    <a href="#" class="ml-auto"><i class="icon-more"></i></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header transparent b-b">
+                            <strong>Recommended Videos</strong>
+                        </div>
+                        <ul class="playlist list-group list-group-flush">
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center ">
+                                    <div class="col-5">
+                                        <img src="assets/img/demo/v4.jpg" alt="Card image">
+                                    </div>
+                                    <div class="ml-3">
+                                        <a href="video-single.html">
+                                            <h6>Ilallah, Sounds of Kolachi, Record Studio Season</h6>
+                                        </a>
+                                        <small class="mt-1">Record Studio</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center ">
+                                    <div class="col-5">
+                                        <img src="assets/img/demo/v6.jpg" alt="Card image">
+                                    </div>
+                                    <div class="ml-3">
+                                        <a href="video-single.html">
+                                            <h6>Ilallah, Sounds of Kolachi, Record Studio Season</h6>
+                                        </a>
+                                        <small class="mt-1">Record Studio</small>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center ">
+                                    <div class="col-5">
+                                        <img src="assets/img/demo/v10.jpg" alt="Card image">
+                                    </div>
+                                    <div class="ml-3">
+                                        <a href="video-single.html">
+                                            <h6>Ilallah, Sounds of Kolachi, Record Studio Season</h6>
+                                        </a>
+                                        <small class="mt-1">Record Studio</small>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header transparent b-b">
+                            <strong>Events</strong>
+                        </div>
+                        <ul class="playlist list-group list-group-flush">
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center ">
+                                    <div class="col-8 ">
+                                        <a href="video-single.html">
+                                            <h6>Battal of Bands</h6>
+                                        </a>
+                                        <small class="mt-1"><i class="icon-placeholder-3 mr-1 "></i> London Music Hall
+                                        </small>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <div class="text-lg-center  bg-primary r-10 p-2 text-white primary-bg">
+                                            <div class="s-18">24</div>
+                                            <small>July, 2019</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center ">
+                                    <div class="col-8 ">
+                                        <a href="video-single.html">
+                                            <h6>Battal of Bands</h6>
+                                        </a>
+                                        <small class="mt-1"><i class="icon-placeholder-3 mr-1 "></i> London Music Hall
+                                        </small>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <div class="text-lg-center  bg-primary r-10 p-2 text-white primary-bg">
+                                            <div class="s-18">08</div>
+                                            <small>July, 2019</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center ">
+                                    <div class="col-8 ">
+                                        <a href="video-single.html">
+                                            <h6>Battal of Bands</h6>
+                                        </a>
+                                        <small class="mt-1"><i class="icon-placeholder-3 mr-1 "></i> London Music Hall
+                                        </small>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <div class="text-lg-center  bg-primary r-10 p-2 text-white primary-bg">
+                                            <div class="s-18">12</div>
+                                            <small>July, 2019</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header transparent b-b">
+                            <strong>Recommended Events</strong>
+                        </div>
+                        <ul class="playlist list-group list-group-flush">
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center ">
+                                    <div class="">
+                                        <div class="text-lg-center">
+                                            <div class="s-18">24</div>
+                                            <small>July, 2019</small>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-8">
+                                        <a href="video-single.html">
+                                            <h6>Battal of Bands</h6>
+                                        </a>
+                                        <small class="mt-1">London Music Hall</small>
+                                    </div>
+                                    <a class="ajaxifyPage" href="album-single.html"><i
+                                            class="icon-more s-18"></i></a>
+
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center ">
+                                    <div class="">
+                                        <div class="text-lg-center">
+                                            <div class="s-18">09</div>
+                                            <small>July, 2019</small>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-8">
+                                        <a href="video-single.html">
+                                            <h6>Battal of Bands</h6>
+                                        </a>
+                                        <small class="mt-1">London Music Hall</small>
+                                    </div>
+                                    <a class="ajaxifyPage" href="album-single.html"><i
+                                            class="icon-more s-18"></i></a>
+
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center ">
+                                    <div class="">
+                                        <div class="text-lg-center">
+                                            <div class="s-18">13</div>
+                                            <small>July, 2019</small>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-8">
+                                        <a href="video-single.html">
+                                            <h6>Battal of Bands</h6>
+                                        </a>
+                                        <small class="mt-1">London Music Hall</small>
+                                    </div>
+                                    <a class="ajaxifyPage" href="album-single.html"><i
+                                            class="icon-more s-18"></i></a>
+
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+    </div>
+</div>
+</main><!--@Page Content-->
+{% endblock %}
